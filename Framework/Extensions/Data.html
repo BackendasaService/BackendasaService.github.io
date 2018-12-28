@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BaaSDelegate Protocol Reference</title>
+    <title>Data Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/BaaSDelegate" class="dashAnchor"></a>
-    <a title="BaaSDelegate Protocol Reference"></a>
+    <a name="//apple_ref/swift/Extension/Data" class="dashAnchor"></a>
+    <a title="Data Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">BaaS Docs</a> (55% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">BaaS Reference</a>
         <img id="carat" src="../img/carat.png" />
-        BaaSDelegate Protocol Reference
+        Data Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -82,17 +82,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>BaaSDelegate</h1>
+            <h1>Data</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">BaaSDelegate</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Data</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span><span class="p">,</span> <span class="kt">RangeReplaceableCollection</span></code></pre>
 
                 </div>
               </div>
-            <p><strong>B</strong>ackend <strong>a</strong>s <strong>a</strong> <strong>S</strong>ervice (<em>BaaS</em>)</p>
-
-<p>This protocol is used for the BaaS Server Interface.</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -100,9 +97,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4BaaS0A9SDelegateP13testForReturn10withDataAsySS_tF"></a>
-                    <a name="//apple_ref/swift/Method/testForReturn(withDataAs:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4BaaS0A9SDelegateP13testForReturn10withDataAsySS_tF">testForReturn(withDataAs:)</a>
+                    <a name="/s:10Foundation4DataV4BaaSE7deflateACSgyF"></a>
+                    <a name="//apple_ref/swift/Method/deflate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4BaaSE7deflateACSgyF">deflate()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -110,18 +107,64 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Compresses the data using the zlib deflate algorithm.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Fixed at compression level 5 (best trade off between speed and time)
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">testForReturn</span><span class="p">(</span><span class="nv">withDataAs</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deflate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>raw deflated data according to <a href="https://tools.ietf.org/html/rfc1951">RFC-1951</a>.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BackendasaService/BaaS/blob/master/Framework/BaaS/BaaS/BaaS-Delegate.swift#L20">Show on GitHub</a>
+                        <a href="https://github.com/BackendasaService/BaaS/blob/master/Framework/BaaS/BaaS/BaaS-Compression.swift#L130-L144">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DataV4BaaSE7inflateACSgyF"></a>
+                    <a name="//apple_ref/swift/Method/inflate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DataV4BaaSE7inflateACSgyF">inflate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decompresses the data using the zlib deflate algorithm.
+Self is expected to be a raw deflate
+stream according to <a href="https://tools.ietf.org/html/rfc1951">RFC-1951</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">inflate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>uncompressed data</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BackendasaService/BaaS/blob/master/Framework/BaaS/BaaS/BaaS-Compression.swift#L152-L166">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

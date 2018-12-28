@@ -1,117 +1,222 @@
 {
   "warnings": [
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 215,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 14,
+      "symbol": "UIColor.BaaS",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 133,
+      "symbol": "BaaS.BaaS_Color.hex",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 134,
+      "symbol": "BaaS.BaaS_Color.rgb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 135,
+      "symbol": "BaaS.BaaS_Color.k",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 135,
+      "symbol": "BaaS.BaaS_Color.r",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 135,
+      "symbol": "BaaS.BaaS_Color.y",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 136,
+      "symbol": "BaaS.BaaS_Color.g",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 137,
+      "symbol": "BaaS.BaaS_Color.b",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 138,
+      "symbol": "BaaS.BaaS_Color.hsv",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 139,
+      "symbol": "BaaS.BaaS_Color.h",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 140,
+      "symbol": "BaaS.BaaS_Color.c",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 140,
+      "symbol": "BaaS.BaaS_Color.s",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 140,
+      "symbol": "BaaS.BaaS_Color.v",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 141,
+      "symbol": "BaaS.BaaS_Color.cmyk",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 142,
+      "symbol": "BaaS.BaaS_Color.m",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 310,
       "symbol": "BaaS.BaaS_dbFieldType.text",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 216,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 311,
       "symbol": "BaaS.BaaS_dbFieldType.number",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 240,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 335,
       "symbol": "BaaS.BaaS_SearchType.eq",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 240,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 335,
       "symbol": "BaaS.BaaS_SearchType.equals",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 240,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 335,
       "symbol": "BaaS.BaaS_SearchType.value",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 241,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 336,
       "symbol": "BaaS.BaaS_SearchType.neq",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 241,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 336,
       "symbol": "BaaS.BaaS_SearchType.notEquals",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 241,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 336,
       "symbol": "BaaS.BaaS_SearchType.notValue",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 242,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 337,
       "symbol": "BaaS.BaaS_SearchType.like",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 243,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 338,
       "symbol": "BaaS.BaaS_SearchType.location",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 265,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 360,
       "symbol": "BaaS.BaaS_Errors.unableToDecodeJSON",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 641,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 736,
       "symbol": "BaaS.value(expression:inDatabase:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 747,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 842,
       "symbol": "BaaS.fileUpload(data:saveWithFileID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 765,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 864,
       "symbol": "BaaS.fileExists(withFileID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 778,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 879,
       "symbol": "BaaS.fileDownload(withFileID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework/BaaS/BaaS/BaaS.swift",
-      "line": 791,
+      "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS.swift",
+      "line": 893,
       "symbol": "BaaS.fileDelete(withFileID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/wes/Cloud/GITHUB.COM/WDG/BaaS/Framework"
+  "source_directory": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework"
 }
