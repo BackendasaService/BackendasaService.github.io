@@ -1,0 +1,23 @@
+@import url('xcode.css');
+
+.url::before {
+    color: black;
+    content: 'POST https://yourserver.ext/BaaS/index.php/';
+}
+
+.url {
+    color: blue;
+    border: 1px solid #000;
+    background: lightgrey;
+    font-size: 21px;
+}
+
+.options::before {
+    color: black;
+    content: '/';
+}
+
+.options {
+    color: orange;
+    font-size: 21px;
+}
