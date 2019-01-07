@@ -151,4 +151,4 @@ $page = preg_replace("/\[ITEM_REPEAT\](.*?)\[\/ITEM_REPEAT\]/s", implode(PHP_EOL
 $page = preg_replace("/\[CURRENT_DATE\]/", date('D d M Y'), $page);
 
 echo $page;
-file_put_contents('index.php', $page);
+file_put_contents('index.html', $page);
