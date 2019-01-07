@@ -1059,7 +1059,7 @@
     </style>
     <script type="text/javascript">
     function changeAPIKey(toAPIKey) {
-        document.body.innerHTML = document.body.innerHTML.replace('YOUR' + '_API_KEY', toAPIKey)
+        document.body.innerHTML = document.body.innerHTML.replace(new RegExp('YOUR' + '_API_KEY', 'g'), toAPIKey)
     }
 
     </script>
@@ -1087,7 +1087,7 @@
                     <div class="collapse-content">
                         <ul>
                             <li><a href="#user_create"></span>user.create</a></li>
-<li><a href="#user_login"></span>user.login</a></li>
+                            <li><a href="#user_login"></span>user.login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1107,7 +1107,6 @@
                     <h2 id="header-getting-started">Getting Started <a class="permalink" href="#header-getting-started" aria-hidden="true">¶</a></h2>
                     <p>All requests must be made with POST and with a body which starts with <code>JSON=</code></p>
                 </div>
-                
                 <hr class="split">
                 <div class="middle">
                     <div id="" class="resource"><h3 class="resource-heading">Create a user <a href="#" class="permalink">&para;</a></h3>
@@ -1137,10 +1136,9 @@
                                 <div class="example-names">
                                     <span>Responses</span>
                                     <span class="tab-button">200</span>
-<span class="tab-button">300</span>
-<span class="tab-button">400</span>
+                                    <span class="tab-button">300</span>
+                                    <span class="tab-button">400</span>
                                 </div>
-                                
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
@@ -1150,8 +1148,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
@@ -1161,8 +1157,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
@@ -1172,7 +1166,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
@@ -1182,8 +1175,6 @@
                         <p>With this call you can create a user.</p>
                     </div>
                 </div>
-                
-
                 <hr class="split">
                 <div class="middle">
                     <div id="" class="resource"><h3 class="resource-heading">Login a user <a href="#" class="permalink">&para;</a></h3>
@@ -1211,10 +1202,9 @@
                                 <div class="example-names">
                                     <span>Responses</span>
                                     <span class="tab-button">200</span>
-<span class="tab-button">300</span>
-<span class="tab-button">400</span>
+                                    <span class="tab-button">300</span>
+                                    <span class="tab-button">400</span>
                                 </div>
-                                
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
@@ -1224,8 +1214,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
@@ -1235,8 +1223,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
@@ -1246,7 +1232,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
@@ -1256,7 +1241,6 @@
                         <p>With this call you can login a user.</p>
                     </div>
                 </div>
-                
                 <hr class="split">
                 <div class="middle">
                     <p style="text-align: center;" class="text-muted">Last update Mon 07 Jan 2019

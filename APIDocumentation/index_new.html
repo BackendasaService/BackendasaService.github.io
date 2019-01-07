@@ -1059,7 +1059,8 @@
     </style>
     <script type="text/javascript">
     function changeAPIKey(toAPIKey) {
-        document.body.innerHTML = document.body.innerHTML.replace('YOUR' + '_API_KEY', toAPIKey)
+        document.body.innerHTML = document.body.innerHTML.replace(new RegExp('YOUR' + '_API_KEY', 'g'), toAPIKey)
+
     }
 
     </script>
