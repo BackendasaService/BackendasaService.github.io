@@ -1058,9 +1058,14 @@
 
     </style>
     <script type="text/javascript">
-    function changeAPIKey(toAPIKey) {
-        document.body.innerHTML = document.body.innerHTML.replace(new RegExp('YOUR' + '_API_KEY', 'g'), toAPIKey)
+    window.theApiKey = 'YOUR' + '_API_KEY';
 
+    function changeAPIKey(toAPIKey) {
+        var items = document.querySelectorAll('font')
+        for (var i = items.length - 1; i >= 0; i--) {
+            items[i].innerHTML = items[i].innerHTML.replace(new RegExp(window.theApiKey, 'g'), toAPIKey)
+        }
+        window.theApiKey = toAPIKey
     }
 
     </script>
@@ -1099,7 +1104,9 @@
                     <header><h1 id="top">BaaS API Documentation</h1>
                     </header>
                 </div>
-                <div class="right"><h5>API Endpoint</h5><a href="http://sitename.ext/BaaS/index.php">http://sitename.ext/BaaS/index.php</a></div>
+                <div class="right"><h5>API Endpoint</h5><a href="http://sitename.ext/BaaS/index.php">http://sitename.ext/BaaS/index.php</a>
+                    <br />
+                    API KEY = <input type='text' name='hey' placeholder='YOUR_API_KEY' onchange='changeAPIKey(this.value)'></div>
                 <div class="middle">
                     <p>This is the official documentation for communication with the BaaS Backend Server.</p>
                     <p>API Version: <code>1.0</code></p>
