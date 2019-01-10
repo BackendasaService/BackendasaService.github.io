@@ -744,7 +744,9 @@
         color: black;
         border: 1px solid #ddd;
         padding: 6px;
-        margin-left: 12px
+        margin-left: 12px;
+        display: inline-block;
+        margin-top: 12px;
     }
 
     .example-names .tab-button.active {
@@ -1092,8 +1094,14 @@
                     </div>
                     <div class="collapse-content">
                         <ul>
-                            <li><a href="#user_create"></span>user.create</a></li>
+                            <li><a href="#session_admin_invalidateAll"></span>session.admin.invalidateAll</a></li>
+<li><a href="#session_continue"></span>session.continue</a></li>
+<li><a href="#session_create"></span>session.create</a></li>
+<li><a href="#session_invalidate"></span>session.invalidate</a></li>
+<li><a href="#GET|user_activate/ActivationToken"></span>GET|user.activate/ActivationToken</a></li>
+<li><a href="#user_create"></span>user.create</a></li>
 <li><a href="#user_login"></span>user.login</a></li>
+<li><a href="#user_logout"></span>user.logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1118,7 +1126,513 @@
                 
                 <hr class="split">
                 <div class="middle">
-                    <div id="" class="resource"><h3 class="resource-heading">Create a user <a href="#" class="permalink">&para;</a></h3>
+                    <div id="" class="resource"><h3 class="resource-heading">Base HTTP Codes <a href="#" class="permalink">&para;</a></h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://sitename.ext/BaaS/index.php</span>/</span></div>
+                    <div class="tabs">
+                        <!--
+                        <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
+                    -->
+                        <div class="tab">
+                            <!--
+                            <div>
+                                <div class="inner">
+                                    <div style="height: 1px;"></div>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>N/A</font>
+</code></pre>
+                                    <div style="height: 1px;"></div>
+                                </div>
+                            </div>
+                            -->
+                            <div class="tabs">
+                                <div class="example-names">
+                                    <span>Responses</span>
+                                    <span class="tab-button">200</span>
+<span class="tab-button">406</span>
+<span class="tab-button">406</span>
+<span class="tab-button">501</span>
+                                </div>
+                                
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>OK.</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>/* This is a warning that the used API Key is INVALID */<br>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Warning"</font><font color='white'>:</font><font color='green'>"You are using an invalid API key for this service."</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"BaaS/VERSION&#44;&nbsp;Connection&#58;&nbsp;Close&#44;&nbsp;IP-Address&#58;&nbsp;YOUR_IP"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='white'>:</font><font color='green'>"SENT_API_KEY_IF_ANY"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>/* This is a warning that the used API Key is INVALID&#44;<br>&nbsp;&nbsp;&nbsp;And there are no retries left.<br>&nbsp;&nbsp;&nbsp;The IP-Address is banned */<br>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Warning"</font><font color='white'>:</font><font color='green'>"You are blocked from using this service."</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"BaaS/VERSION&#44;&nbsp;Connection&#58;&nbsp;Close&#44;&nbsp;IP-Address&#58;&nbsp;YOUR_IP"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='white'>:</font><font color='green'>"SENT_API_KEY_IF_ANY"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>/* Invalid request&#44; Method does not exists. */<br>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Error"</font><font color='white'>:</font><font color='green'>"Method not implented."</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Method"</font><font color='white'>:</font><font color='green'>"HTTP_METHOD"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Data"</font><font color='white'>:</font><font color='green'>"REQUESTED DATA"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"ReqURI"</font><font color='white'>:</font><font color='green'>"REQUESTED_URI"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div id="" class="action post"><h4 class="action-heading"><div class="name">Base HTTP Codes</div><a href="#" class="method post">POST</a><code class="uri">/</code></h4>
+                        <p>You can always get one of this HTTP Status codes back.<br>Carefully read them.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>N/A</font>
+</code></pre>
+                        </p>
+                    </div>
+                </div>
+                
+
+                <hr class="split">
+                <div class="middle">
+                    <div id="session_admin_invalidateAll" class="resource"><h3 class="resource-heading">Invalidate all sessions <a href="#session_admin_invalidateAll" class="permalink">&para;</a></h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://sitename.ext/BaaS/index.php</span>/session.admin.invalidateAll</span></div>
+                    <div class="tabs">
+                        <!--
+                        <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
+                    -->
+                        <div class="tab">
+                            <!--
+                            <div>
+                                <div class="inner">
+                                    <div style="height: 1px;"></div>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='black'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                                    <div style="height: 1px;"></div>
+                                </div>
+                            </div>
+                            -->
+                            <div class="tabs">
+                                <div class="example-names">
+                                    <span>Responses</span>
+                                    <span class="tab-button">Ok</span>
+<span class="tab-button">Failed</span>
+                                </div>
+                                
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Ok"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Sessions invalidated"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Sessions continued"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div id="session_admin_invalidateAll" class="action post"><h4 class="action-heading"><div class="name">Invalidate all sessions</div><a href="#session_admin_invalidateAll" class="method post">POST</a><code class="uri">/session.admin.invalidateAll</code></h4>
+                        <p>Invalidate all sessions.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='black'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                        </p>
+                    </div>
+                </div>
+                
+
+                <hr class="split">
+                <div class="middle">
+                    <div id="session_continue" class="resource"><h3 class="resource-heading">Continue a session <a href="#session_continue" class="permalink">&para;</a></h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://sitename.ext/BaaS/index.php</span>/session.continue</span></div>
+                    <div class="tabs">
+                        <!--
+                        <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
+                    -->
+                        <div class="tab">
+                            <!--
+                            <div>
+                                <div class="inner">
+                                    <div style="height: 1px;"></div>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='black'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                                    <div style="height: 1px;"></div>
+                                </div>
+                            </div>
+                            -->
+                            <div class="tabs">
+                                <div class="example-names">
+                                    <span>Responses</span>
+                                    <span class="tab-button">Ok</span>
+<span class="tab-button">Failed</span>
+                                </div>
+                                
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Ok"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Session continued"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Session invalidated"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div id="session_continue" class="action post"><h4 class="action-heading"><div class="name">Continue a session</div><a href="#session_continue" class="method post">POST</a><code class="uri">/session.continue</code></h4>
+                        <p>Continue a running session (if the session is not timedout/expired)<br />Note: Always save the new SessionID this could change due to protection.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='black'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                        </p>
+                    </div>
+                </div>
+                
+
+                <hr class="split">
+                <div class="middle">
+                    <div id="session_create" class="resource"><h3 class="resource-heading">Create a session <a href="#session_create" class="permalink">&para;</a></h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://sitename.ext/BaaS/index.php</span>/session.create</span></div>
+                    <div class="tabs">
+                        <!--
+                        <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
+                    -->
+                        <div class="tab">
+                            <!--
+                            <div>
+                                <div class="inner">
+                                    <div style="height: 1px;"></div>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='black'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                                    <div style="height: 1px;"></div>
+                                </div>
+                            </div>
+                            -->
+                            <div class="tabs">
+                                <div class="example-names">
+                                    <span>Responses</span>
+                                    <span class="tab-button">Ok</span>
+<span class="tab-button">Failed</span>
+                                </div>
+                                
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Ok"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Session created"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Session invalidated"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div id="session_create" class="action post"><h4 class="action-heading"><div class="name">Create a session</div><a href="#session_create" class="method post">POST</a><code class="uri">/session.create</code></h4>
+                        <p>Create a new session id.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='black'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                        </p>
+                    </div>
+                </div>
+                
+
+                <hr class="split">
+                <div class="middle">
+                    <div id="session_invalidate" class="resource"><h3 class="resource-heading">Invalidate a session <a href="#session_invalidate" class="permalink">&para;</a></h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://sitename.ext/BaaS/index.php</span>/session.invalidate</span></div>
+                    <div class="tabs">
+                        <!--
+                        <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
+                    -->
+                        <div class="tab">
+                            <!--
+                            <div>
+                                <div class="inner">
+                                    <div style="height: 1px;"></div>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='black'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                                    <div style="height: 1px;"></div>
+                                </div>
+                            </div>
+                            -->
+                            <div class="tabs">
+                                <div class="example-names">
+                                    <span>Responses</span>
+                                    <span class="tab-button">Ok</span>
+<span class="tab-button">Failed</span>
+                                </div>
+                                
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Ok"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Session invalidated"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Session continued"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div id="session_invalidate" class="action post"><h4 class="action-heading"><div class="name">Invalidate a session</div><a href="#session_invalidate" class="method post">POST</a><code class="uri">/session.invalidate</code></h4>
+                        <p>Invalidate a session.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='black'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                        </p>
+                    </div>
+                </div>
+                
+
+                <hr class="split">
+                <div class="middle">
+                    <div id="GET|user_activate/ActivationToken" class="resource"><h3 class="resource-heading">Activate user <a href="#GET|user_activate/ActivationToken" class="permalink">&para;</a></h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="definition"><span class="method post">GET</span>&nbsp;<span class="uri"><span class="hostname">http://sitename.ext/BaaS/index.php</span>/user.activate/ActivationToken</span></div>
+                    <div class="tabs">
+                        <!--
+                        <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
+                    -->
+                        <div class="tab">
+                            <!--
+                            <div>
+                                <div class="inner">
+                                    <div style="height: 1px;"></div>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>N/A</font>
+</code></pre>
+                                    <div style="height: 1px;"></div>
+                                </div>
+                            </div>
+                            -->
+                            <div class="tabs">
+                                <div class="example-names">
+                                    <span>Responses</span>
+                                    <span class="tab-button">Ok</span>
+<span class="tab-button">Failed</span>
+                                </div>
+                                
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>(HTML Website)</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>(HTML Website)</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div id="GET|user_activate/ActivationToken" class="action post"><h4 class="action-heading"><div class="name">Activate user</div><a href="#GET|user_activate/ActivationToken" class="method post">GET</a><code class="uri">/user.activate/ActivationToken</code></h4>
+                        <p>Activate user (WEB-Call), Only if user activation is required.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>N/A</font>
+</code></pre>
+                        </p>
+                    </div>
+                </div>
+                
+
+                <hr class="split">
+                <div class="middle">
+                    <div id="user_create" class="resource"><h3 class="resource-heading">Create a user <a href="#user_create" class="permalink">&para;</a></h3>
                     </div>
                 </div>
                 <div class="right">
@@ -1128,31 +1642,39 @@
                         <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
                     -->
                         <div class="tab">
+                            <!--
                             <div>
                                 <div class="inner">
                                     <div style="height: 1px;"></div>
-                                    <h5>Body</h5><pre><code>JSON=</font><font color='white'>{</font>
-    <font color='#02bcf4'>"APIKey"</font><font color='white'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='white'>,</font>
-    <font color='#02bcf4'>"username"</font><font color='white'>:</font><font color='green'>"THE_USERNAME"</font><font color='white'>,</font>
-    <font color='#02bcf4'>"password"</font><font color='white'>:</font><font color='green'>"THE_PASSWORD"</font><font color='white'>,</font>
-    <font color='#02bcf4'>"email"</font><font color='white'>:</font><font color='green'>"THE_EMAIL"</font><font color='white'>,</font>
-</font><font color='white'>}</font>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"username"</font><font color='black'>:</font><font color='green'>"THE_USERNAME"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"password"</font><font color='black'>:</font><font color='green'>"THE_PASSWORD"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"email"</font><font color='black'>:</font><font color='green'>"THE_EMAIL"</font>
+</font><font color='black'>}</font>
 </code></pre>
                                     <div style="height: 1px;"></div>
                                 </div>
                             </div>
+                            -->
                             <div class="tabs">
                                 <div class="example-names">
                                     <span>Responses</span>
-                                    <span class="tab-button">200</span>
-<span class="tab-button">300</span>
-<span class="tab-button">400</span>
+                                    <span class="tab-button">User Created</span>
+<span class="tab-button">Password Mismatch</span>
+<span class="tab-button">Email already in use</span>
+<span class="tab-button">Registration disabled</span>
+<span class="tab-button">Other error</span>
                                 </div>
                                 
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
-                                            <div class="description"><pre><code>200</code></pre>
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Ok"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"User account created"</font>
+</font><font color='white'>}</font>
+</code></pre>
                                             </div>
                                             <div style="height: 1px;"></div>
                                         </div>
@@ -1163,7 +1685,11 @@
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
-                                            <div class="description"><pre><code>300</code></pre>
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Password Mismatch"</font>
+</font><font color='white'>}</font>
+</code></pre>
                                             </div>
                                             <div style="height: 1px;"></div>
                                         </div>
@@ -1174,7 +1700,41 @@
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
-                                            <div class="description"><pre><code>400</code></pre>
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Email in use"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Registration disabled"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"The error about what went wrong"</font>
+</font><font color='white'>}</font>
+</code></pre>
                                             </div>
                                             <div style="height: 1px;"></div>
                                         </div>
@@ -1186,15 +1746,25 @@
                     </div>
                 </div>
                 <div class="middle">
-                    <div id="" class="action post"><h4 class="action-heading"><div class="name">Create a user</div><a href="#" class="method post">POST</a><code class="uri">/user.create</code></h4>
+                    <div id="user_create" class="action post"><h4 class="action-heading"><div class="name">Create a user</div><a href="#user_create" class="method post">POST</a><code class="uri">/user.create</code></h4>
                         <p>With this call you can create a user.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"username"</font><font color='black'>:</font><font color='green'>"THE_USERNAME"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"password"</font><font color='black'>:</font><font color='green'>"THE_PASSWORD"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"email"</font><font color='black'>:</font><font color='green'>"THE_EMAIL"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                        </p>
                     </div>
                 </div>
                 
 
                 <hr class="split">
                 <div class="middle">
-                    <div id="" class="resource"><h3 class="resource-heading">Login a user <a href="#" class="permalink">&para;</a></h3>
+                    <div id="user_login" class="resource"><h3 class="resource-heading">Login a user <a href="#user_login" class="permalink">&para;</a></h3>
                     </div>
                 </div>
                 <div class="right">
@@ -1204,29 +1774,36 @@
                         <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
                     -->
                         <div class="tab">
+                            <!--
                             <div>
                                 <div class="inner">
                                     <div style="height: 1px;"></div>
-                                    <h5>Body</h5><pre><code>JSON=</font><font color='white'>{</font>
-    <font color='#02bcf4'>"APIKey"</font><font color='white'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='white'>,</font>
-    <font color='#02bcf4'>"password"</font><font color='white'>:</font><font color='green'>""</font><font color='white'>,</font>
-</font><font color='white'>}</font>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"password"</font><font color='black'>:</font><font color='green'>""</font>
+</font><font color='black'>}</font>
 </code></pre>
                                     <div style="height: 1px;"></div>
                                 </div>
                             </div>
+                            -->
                             <div class="tabs">
                                 <div class="example-names">
                                     <span>Responses</span>
-                                    <span class="tab-button">200</span>
-<span class="tab-button">300</span>
-<span class="tab-button">400</span>
+                                    <span class="tab-button">Logged In</span>
+<span class="tab-button">Login Failed</span>
+<span class="tab-button">Login Disabled</span>
                                 </div>
                                 
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
-                                            <div class="description"><pre><code>200</code></pre>
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Ok"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"User logged in"</font>
+</font><font color='white'>}</font>
+</code></pre>
                                             </div>
                                             <div style="height: 1px;"></div>
                                         </div>
@@ -1237,7 +1814,12 @@
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
-                                            <div class="description"><pre><code>300</code></pre>
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Username/Password incorrect"</font>
+</font><font color='white'>}</font>
+</code></pre>
                                             </div>
                                             <div style="height: 1px;"></div>
                                         </div>
@@ -1248,7 +1830,12 @@
                                 <div class="tab">
                                     <div>
                                         <div class="inner">
-                                            <div class="description"><pre><code>400</code></pre>
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Failed"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"Login disabled"</font>
+</font><font color='white'>}</font>
+</code></pre>
                                             </div>
                                             <div style="height: 1px;"></div>
                                         </div>
@@ -1260,14 +1847,85 @@
                     </div>
                 </div>
                 <div class="middle">
-                    <div id="" class="action post"><h4 class="action-heading"><div class="name">Login a user</div><a href="#" class="method post">POST</a><code class="uri">/user.login</code></h4>
+                    <div id="user_login" class="action post"><h4 class="action-heading"><div class="name">Login a user</div><a href="#user_login" class="method post">POST</a><code class="uri">/user.login</code></h4>
                         <p>With this call you can login a user.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font><font color='black'>,</font>
+    <font color='#02bcf4'>"password"</font><font color='black'>:</font><font color='green'>""</font>
+</font><font color='black'>}</font>
+</code></pre>
+                        </p>
+                    </div>
+                </div>
+                
+
+                <hr class="split">
+                <div class="middle">
+                    <div id="user_logout" class="resource"><h3 class="resource-heading">Logout a user <a href="#user_logout" class="permalink">&para;</a></h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://sitename.ext/BaaS/index.php</span>/user.logout</span></div>
+                    <div class="tabs">
+                        <!--
+                        <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
+                    -->
+                        <div class="tab">
+                            <!--
+                            <div>
+                                <div class="inner">
+                                    <div style="height: 1px;"></div>
+                                    <h5>Body</h5><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                                    <div style="height: 1px;"></div>
+                                </div>
+                            </div>
+                            -->
+                            <div class="tabs">
+                                <div class="example-names">
+                                    <span>Responses</span>
+                                    <span class="tab-button">Logged In</span>
+                                </div>
+                                
+                                <div class="tab">
+                                    <div>
+                                        <div class="inner">
+                                            <div class="description"><pre><code></font><font color='white'>{</font>
+    <font color='#02bcf4'>"Status"</font><font color='white'>:</font><font color='green'>"Ok"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"SessionID"</font><font color='white'>:</font><font color='green'>"YOUR_SESSION_TOKEN"</font><font color='white'>,</font>
+    <font color='#02bcf4'>"Details"</font><font color='white'>:</font><font color='green'>"User logged out"</font>
+</font><font color='white'>}</font>
+</code></pre>
+                                            </div>
+                                            <div style="height: 1px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div id="user_logout" class="action post"><h4 class="action-heading"><div class="name">Logout a user</div><a href="#user_logout" class="method post">POST</a><code class="uri">/user.logout</code></h4>
+                        <p>With this call you can logout a user.</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=</font><font color='black'>{</font>
+    <font color='#02bcf4'>"APIKey"</font><font color='black'>:</font><font color='green'>"YOUR_API_KEY"</font>
+</font><font color='black'>}</font>
+</code></pre>
+                        </p>
                     </div>
                 </div>
                 
                 <hr class="split">
                 <div class="middle">
-                    <p style="text-align: center;" class="text-muted">Last update Mon 07 Jan 2019
+                    <p style="text-align: center;" class="text-muted">Last update Thu 10 Jan 2019
                     </p>
                 </div>
             </div>

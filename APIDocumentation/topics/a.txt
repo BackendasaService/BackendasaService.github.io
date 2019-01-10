@@ -1,0 +1,8 @@
+
+Base HTTP Codes
+You can always get one of this HTTP Status codes back.<br>Carefully read them.
+N/A
+200=OK.
+406=/* This is a warning that the used API Key is INVALID */<br>{"Status":"Failed","Warning":"You are using an invalid API key for this service.","Details":"BaaS/VERSION&#44;&nbsp;Connection&#58;&nbsp;Close&#44;&nbsp;IP-Address&#58;&nbsp;YOUR_IP","APIKey":"SENT_API_KEY_IF_ANY"}
+406=/* This is a warning that the used API Key is INVALID&#44;<br>&nbsp;&nbsp;&nbsp;And there are no retries left.<br>&nbsp;&nbsp;&nbsp;The IP-Address is banned */<br>{"Status":"Failed","Warning":"You are blocked from using this service.","Details":"BaaS/VERSION&#44;&nbsp;Connection&#58;&nbsp;Close&#44;&nbsp;IP-Address&#58;&nbsp;YOUR_IP","APIKey":"SENT_API_KEY_IF_ANY"}
+501=/* Invalid request&#44; Method does not exists. */<br>{"Status":"Failed","Error":"Method not implented.","Method":"HTTP_METHOD","Data":"REQUESTED DATA","ReqURI":"REQUESTED_URI"}

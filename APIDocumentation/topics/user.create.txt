@@ -1,0 +1,9 @@
+user.create
+Create a user
+With this call you can create a user.
+{"APIKey":"YOUR_API_KEY","username":"THE_USERNAME","password":"THE_PASSWORD","email":"THE_EMAIL"}
+User Created={"Status":"Ok","Details":"User account created"}
+Password Mismatch={"Status":"Failed","Details":"Password Mismatch"}
+Email already in use={"Status":"Failed","Details":"Email in use"}
+Registration disabled={"Status":"Failed","Details":"Registration disabled"}
+Other error={"Status":"Failed","Details":"The error about what went wrong"}

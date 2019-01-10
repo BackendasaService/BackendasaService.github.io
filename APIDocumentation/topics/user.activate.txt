@@ -1,0 +1,6 @@
+GET|user.activate/ActivationToken
+Activate user
+Activate user (WEB-Call), Only if user activation is required.
+N/A
+Ok=(HTML Website)
+Failed=(HTML Website)

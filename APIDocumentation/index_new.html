@@ -744,7 +744,9 @@
         color: black;
         border: 1px solid #ddd;
         padding: 6px;
-        margin-left: 12px
+        margin-left: 12px;
+        display: inline-block;
+        margin-top: 12px;
     }
 
     .example-names .tab-button.active {
@@ -1127,6 +1129,7 @@
                         <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
                     -->
                         <div class="tab">
+                            <!--
                             <div>
                                 <div class="inner">
                                     <div style="height: 1px;"></div>
@@ -1134,6 +1137,7 @@
                                     <div style="height: 1px;"></div>
                                 </div>
                             </div>
+                            -->
                             <div class="tabs">
                                 <div class="example-names">
                                     <span>Responses</span>
@@ -1157,6 +1161,10 @@
                 <div class="middle">
                     <div id="[SHORTCUT]" class="action post"><h4 class="action-heading"><div class="name">[SHORT_DESCRIPTION]</div><a href="#[SHORTCUT]" class="method post">POST</a><code class="uri">/[REQUEST_URL]</code></h4>
                         <p>[LONG_DESCRIPTION]</p>
+                        <br>
+                        <b>Post data</b>
+                        <p><pre><code>JSON=[BODY_TEXT]</code></pre>
+                        </p>
                     </div>
                 </div>
                 [/ITEM_REPEAT]

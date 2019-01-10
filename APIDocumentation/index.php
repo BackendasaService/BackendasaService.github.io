@@ -1,16 +1,20 @@
 <?php
+/*
+ * Dear reader,
+ *
+ * Please note that this is made quick, and dirty.
+ * There are no explaining comments, neither usefull comments.
+ *
+ */
+
 if (file_exists('index_new.html')) {
     $page = file_get_contents('index_new.html');
 }
 
 $topics = array();
 
-foreach (glob("topics/*.html") as $file) {
-    if ($file != '.'
-        && $file != '..'
-        && !is_dir($file)
-        && !preg_match("/\.min/", $file)
-    ) {
+foreach (glob("topics/*.txt") as $file) {
+    if ($file != '.' && $file != '..' && !is_dir($file)) {
         $topics[] = parseFile(
             file_get_contents($file)
         );
@@ -18,7 +22,7 @@ foreach (glob("topics/*.html") as $file) {
 }
 
 // To easy, and fast JSON Highlighter
-function jsonHighlight($input)
+function jsonHighlight($input, $white = true)
 {
     $input = implode("{" . PHP_EOL, explode("{", $input));
     $input = implode("," . PHP_EOL, explode(",", $input));
@@ -26,6 +30,7 @@ function jsonHighlight($input)
 
     $newReturn = "";
     $ident = 0;
+    $index = 0;
     // Better way.
     // Walk trough input
     foreach (explode(PHP_EOL, $input) as $line) {
@@ -43,13 +48,17 @@ function jsonHighlight($input)
         if (sizeof($parseline) == 2) {
             $newReturn .= '<font color=\'#02bcf4\'>';
             $newReturn .= $parseline[0];
-            $newReturn .= '</font><font color=\'white\'>:</font>';
+            $newReturn .= '</font><font color=\'' . ($white ? 'white' : 'black') . '\'>:</font>';
             $parseline2 = explode(",", $parseline[1]);
             $newReturn .= '<font color=\'green\'>';
             $newReturn .= $parseline2[0];
-            $newReturn .= '</font><font color=\'white\'>,</font>';
+            if ($index < sizeof(explode(PHP_EOL, $input)) - 2) {
+                $newReturn .= '</font><font color=\'' . ($white ? 'white' : 'black') . '\'>,</font>';
+            } else {
+                $newReturn .= '</font>';
+            }
         } else {
-            $newReturn .= '</font><font color=\'white\'>';
+            $newReturn .= '</font><font color=\'' . ($white ? 'white' : 'black') . '\'>';
             $newReturn .= $line;
             $newReturn .= '</font>';
         }
@@ -58,6 +67,8 @@ function jsonHighlight($input)
         if (preg_match("/\{/", $line)) {
             $ident++;
         }
+
+        $index++;
     }
     return $newReturn;
 }
@@ -99,7 +110,7 @@ function parseFile($file)
         "safe_url" => preg_replace('/\./', '_', $data[0]),
         "short_description" => $data[1],
         "long_description" => $data[2],
-        "request" => jsonHighlight($data[3]),
+        "request" => jsonHighlight($data[3], false),
         "responses" => $responses,
     );
 }
@@ -118,14 +129,24 @@ foreach ($topics as $topic) {
         $labels = array();
         $contents = array();
 
-        $unparsedMenu = $extracted_menu[1][0];
-        $unparsedMenu = preg_replace("/\[MENU_ITEM\]/", $topic['url'], $unparsedMenu);
-        $unparsedMenu = preg_replace("/\[MENU_URL\]/", $topic['safe_url'], $unparsedMenu);
-        $menu[] = $unparsedMenu;
+        if (!empty($topic['url'])) {
+            // Hide BASE.
+            $unparsedMenu = $extracted_menu[1][0];
+            $unparsedMenu = preg_replace("/\[MENU_ITEM\]/", $topic['url'], $unparsedMenu);
+            $unparsedMenu = preg_replace("/\[MENU_URL\]/", $topic['safe_url'], $unparsedMenu);
+            $menu[] = $unparsedMenu;
+        }
 
         $unparsedItem = $extracted_item[1][0];
+
+        // Support for GET Calls.
+        if (substr($topic['url'], 0, 4/* GET| */) == "GET|") {
+            $topic['url'] = substr($topic['url'], 4);
+            $unparsedItem = preg_replace("/POST/", "GET", $unparsedItem);
+        }
+
         $unparsedItem = preg_replace("/\[REQUEST_URL\]/", $topic['url'], $unparsedItem);
-        $unparsedItem = preg_replace("/\[SHORTCUT\]/", $topic['safeurl'], $unparsedItem);
+        $unparsedItem = preg_replace("/\[SHORTCUT\]/", $topic['safe_url'], $unparsedItem);
         $unparsedItem = preg_replace("/\[SHORT_DESCRIPTION\]/", $topic['short_description'], $unparsedItem);
         $unparsedItem = preg_replace("/\[LONG_DESCRIPTION\]/", $topic['long_description'], $unparsedItem);
         $unparsedItem = preg_replace("/\[BODY_TEXT\]/", $topic['request'], $unparsedItem);
@@ -136,7 +157,7 @@ foreach ($topics as $topic) {
 
         for ($i = 0; $i < sizeof($topic['responses']); $i++) {
             $labels[] = preg_replace("/\[RESPONSE_RESPONSE\]/", $topic['responses'][$i]['title'], $repeat_return_lbl[1][0]);
-            $contents[] = preg_replace("/\[RESPONSE_RETURN\]/", $topic['responses'][$i]['title'], $repeat_return_contents[1][1]);
+            $contents[] = preg_replace("/\[RESPONSE_RETURN\]/", $topic['responses'][$i]['response'], $repeat_return_contents[1][1]);
         }
 
         $unparsedItem = preg_replace("/\[RESPONSE_SHOWHIDE\](\<span class=\"tab-button\"\>\[RESPONSE_RESPONSE\]\<\/span\>)\[\/RESPONSE_SHOWHIDE\]/", implode(PHP_EOL, $labels), $unparsedItem);

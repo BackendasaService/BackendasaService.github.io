@@ -1,0 +1,6 @@
+session.create
+Create a session
+Create a new session id.
+{"APIKey":"YOUR_API_KEY","SessionID":"YOUR_SESSION_TOKEN"}
+Ok={"Status":"Ok","SessionID":"YOUR_SESSION_TOKEN","Details":"Session created"}
+Failed={"Status":"Failed","SessionID":"YOUR_SESSION_TOKEN","Details":"Session invalidated"}
