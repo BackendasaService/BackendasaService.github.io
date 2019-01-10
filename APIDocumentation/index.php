@@ -7,6 +7,9 @@
  *
  */
 
+// Never run this file with error reporting E_ALL.
+// It probally will drive you crazy.
+
 if (file_exists('index_new.html')) {
     $page = file_get_contents('index_new.html');
 }
@@ -107,7 +110,7 @@ function parseFile($file)
 
     return array(
         "url" => $data[0],
-        "safe_url" => preg_replace('/\./', '_', $data[0]),
+        "safe_url" => preg_replace(array('/\./', '/GET\|/'), array('_', ''), explode("/", $data[0])[0]),
         "short_description" => $data[1],
         "long_description" => $data[2],
         "request" => jsonHighlight($data[3], false),
@@ -128,21 +131,19 @@ foreach ($topics as $topic) {
     if (isset($topic['url'])) {
         $labels = array();
         $contents = array();
-
-        if (!empty($topic['url'])) {
-            // Hide BASE.
-            $unparsedMenu = $extracted_menu[1][0];
-            $unparsedMenu = preg_replace("/\[MENU_ITEM\]/", $topic['url'], $unparsedMenu);
-            $unparsedMenu = preg_replace("/\[MENU_URL\]/", $topic['safe_url'], $unparsedMenu);
-            $menu[] = $unparsedMenu;
-        }
-
         $unparsedItem = $extracted_item[1][0];
-
         // Support for GET Calls.
         if (substr($topic['url'], 0, 4/* GET| */) == "GET|") {
             $topic['url'] = substr($topic['url'], 4);
             $unparsedItem = preg_replace("/POST/", "GET", $unparsedItem);
+        }
+
+        if (!empty($topic['url'])) {
+            // Hide BASE.
+            $unparsedMenu = $extracted_menu[1][0];
+            $unparsedMenu = preg_replace("/\[MENU_ITEM\]/", explode("/", $topic['url'])[0], $unparsedMenu);
+            $unparsedMenu = preg_replace("/\[MENU_URL\]/", $topic['safe_url'], $unparsedMenu);
+            $menu[] = $unparsedMenu;
         }
 
         $unparsedItem = preg_replace("/\[REQUEST_URL\]/", $topic['url'], $unparsedItem);
