@@ -1123,23 +1123,8 @@
                     </div>
                 </div>
                 <div class="right">
-                    <!--
-                    <div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://sitename.ext/BaaS/index.php</span>/[REQUEST_URL]</span></div>
-                -->
                     <div class="tabs">
-                        <!--
-                        <div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div>
-                    -->
                         <div class="tab">
-                            <!--
-                            <div>
-                                <div class="inner">
-                                    <div style="height: 1px;"></div>
-                                    <h5>Body</h5><pre><code>JSON=[BODY_TEXT]</code></pre>
-                                    <div style="height: 1px;"></div>
-                                </div>
-                            </div>
-                            -->
                             <div class="tabs">
                                 <div class="example-names">
                                     <span>Responses</span>
@@ -1272,48 +1257,6 @@
     }
 
     /*
-      Collapse or show a navigation menu. It will not be hidden unless it
-      is currently selected or `force` has been passed.
-    */
-    function toggleCollapseNav(event, force) {
-        var heading = event.target.parentNode;
-        var content = heading.nextSibling;
-        var inner = content.children[0];
-
-        if (heading.className.indexOf('heading') === -1) {
-            // Clicked without hitting the right element?
-            return;
-        }
-
-        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-            // Currently showing, so let's hide it, but only if this nav item
-            // is already selected. This prevents newly selected items from
-            // collapsing in an annoying fashion.
-            if (force || window.location.hash && endsWith(event.target.href, window.location.hash)) {
-                content.style.maxHeight = '0px';
-            }
-        } else {
-            // Currently hidden, so let's show it
-            content.style.maxHeight = inner.offsetHeight + 12 + 'px';
-        }
-    }
-
-    /*
-      Refresh the page after a live update from the server. This only
-      works in live preview mode (using the `--server` parameter).
-    */
-    function refresh(body) {
-        document.querySelector('body').className = 'preload';
-        document.body.innerHTML = body;
-
-        // Re-initialize the page
-        init();
-        autoCollapse();
-
-        document.querySelector('body').className = '';
-    }
-
-    /*
       Determine which navigation items should be auto-collapsed to show as many
       as possible on the screen, based on the current window height. This also
       collapses them.
@@ -1346,7 +1289,6 @@
                     // our total and then remove it from our list of candidates
                     // that can be collapsed.
                     itemsHeight -= itemHeight;
-                    toggleCollapseNav({ target: sortedItems[i].children[0] }, true);
                     sortedItems.splice(i, 1);
                     break;
                 }
@@ -1382,15 +1324,6 @@
                     toggleTabButton({ target: tabButtons[j] });
                 }
             }
-        }
-
-        // Make nav items clickable to collapse/expand their content.
-        var navItems = document.querySelectorAll('nav .resource-group .heading');
-        for (i = 0; i < navItems.length; i++) {
-            navItems[i].onclick = toggleCollapseNav;
-
-            // Show all by default
-            toggleCollapseNav({ target: navItems[i].children[0] });
         }
     }
 
