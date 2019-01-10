@@ -51,17 +51,17 @@ function jsonHighlight($input, $white = true)
         if (sizeof($parseline) == 2) {
             $newReturn .= '<font color=\'#02bcf4\'>';
             $newReturn .= $parseline[0];
-            $newReturn .= '</font><font color=\'' . ($white ? 'white' : 'black') . '\'>:</font>';
+            $newReturn .= '</font><font color=\'' . ($white ? '#FFFFFF' : '#000000') . '\'>:</font>';
             $parseline2 = explode(",", $parseline[1]);
-            $newReturn .= '<font color=\'green\'>';
+            $newReturn .= '<font color=\'' . ($white ? '#00FF00' : '#008000') . '\'>';
             $newReturn .= $parseline2[0];
             if ($index < sizeof(explode(PHP_EOL, $input)) - 2) {
-                $newReturn .= '</font><font color=\'' . ($white ? 'white' : 'black') . '\'>,</font>';
+                $newReturn .= '</font><font color=\'' . ($white ? '#FFFFFF' : '#000000') . '\'>,</font>';
             } else {
                 $newReturn .= '</font>';
             }
         } else {
-            $newReturn .= '</font><font color=\'' . ($white ? 'white' : 'black') . '\'>';
+            $newReturn .= '</font><font color=\'' . ($white ? '#FFFFFF' : '#000000') . '\'>';
             $newReturn .= $line;
             $newReturn .= '</font>';
         }
