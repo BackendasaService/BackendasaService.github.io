@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BaaS_Errors Enumeration Reference</title>
+    <title>BaaS_Status Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/BaaS_Errors" class="dashAnchor"></a>
-    <a title="BaaS_Errors Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/BaaS_Status" class="dashAnchor"></a>
+    <a title="BaaS_Status Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html">BaaS Docs</a> (58% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html">BaaS Reference</a>
         <img id="carat" src="../../img/carat.png" />
-        BaaS_Errors Enumeration Reference
+        BaaS_Status Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -93,15 +93,17 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>BaaS_Errors</h1>
+            <h1>BaaS_Status</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BaaS_Errors</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BaaS_Status</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CodingKey</span></code></pre>
 
                 </div>
               </div>
-            <p>BaaS possible errors</p>
-<pre class="highlight swift"><code> <span class="n">parameter</span> <span class="n">unableToDecodeJSON</span>
+            <p>BaaS possible status</p>
+<pre class="highlight swift"><code> <span class="n">success</span>
+ <span class="n">failed</span>
+ <span class="n">warning</span>
 </code></pre>
 
           </section>
@@ -111,9 +113,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4BaaSAAC0A8S_ErrorsO18unableToDecodeJSONyA2DmF"></a>
-                    <a name="//apple_ref/swift/Element/unableToDecodeJSON" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4BaaSAAC0A8S_ErrorsO18unableToDecodeJSONyA2DmF">unableToDecodeJSON</a>
+                    <a name="/s:4BaaSAAC0A8S_StatusO7SuccessyA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/Success" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4BaaSAAC0A8S_StatusO7SuccessyA2DmF">Success</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -128,7 +130,97 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unableToDecodeJSON</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Success</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BackendasaService/BaaS/blob/master/Framework/BaaS/BaaS/BaaS-Main.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4BaaSAAC0A8S_StatusO6FailedyA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/Failed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4BaaSAAC0A8S_StatusO6FailedyA2DmF">Failed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented, Help us document it!</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Failed</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BackendasaService/BaaS/blob/master/Framework/BaaS/BaaS/BaaS-Main.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4BaaSAAC0A8S_StatusO4FailyA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/Fail" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4BaaSAAC0A8S_StatusO4FailyA2DmF">Fail</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented, Help us document it!</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Fail</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BackendasaService/BaaS/blob/master/Framework/BaaS/BaaS/BaaS-Main.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4BaaSAAC0A8S_StatusO7WarningyA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/Warning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4BaaSAAC0A8S_StatusO7WarningyA2DmF">Warning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented, Help us document it!</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Warning</span></code></pre>
 
                         </div>
                       </div>
