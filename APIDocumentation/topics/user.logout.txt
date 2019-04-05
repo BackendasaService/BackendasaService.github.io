@@ -2,4 +2,4 @@ user.logout
 Logout a user
 With this call you can logout a user.
 {"APIKey":"YOUR_API_KEY"}
-Logged In={"Status":"Ok","SessionID":"YOUR_SESSION_TOKEN","Details":"User logged out"}
+Logged In={"Status":"Success","SessionID":"YOUR_SESSION_TOKEN","Details":"User logged out"}

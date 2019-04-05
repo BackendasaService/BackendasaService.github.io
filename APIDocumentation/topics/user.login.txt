@@ -2,6 +2,6 @@ user.login
 Login a user
 With this call you can login a user.
 {"APIKey":"YOUR_API_KEY","password":""}
-Logged In={"Status":"Ok","SessionID":"YOUR_SESSION_TOKEN","Details":"User logged in"}
+Logged In={"Status":"Success","SessionID":"YOUR_SESSION_TOKEN","Details":"User logged in"}
 Login Failed={"Status":"Failed","SessionID":"YOUR_SESSION_TOKEN","Details":"Username/Password incorrect"}
 Login Disabled={"Status":"Failed","SessionID":"YOUR_SESSION_TOKEN","Details":"Login disabled"}

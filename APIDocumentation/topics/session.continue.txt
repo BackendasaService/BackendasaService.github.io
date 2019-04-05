@@ -2,5 +2,5 @@ session.continue
 Continue a session
 Continue a running session (if the session is not timedout/expired)<br />Note: Always save the new SessionID this could change due to protection.
 {"APIKey":"YOUR_API_KEY","SessionID":"YOUR_SESSION_TOKEN"}
-Ok={"Status":"Ok","SessionID":"YOUR_SESSION_TOKEN","Details":"Session continued"}
+Ok={"Status":"Success","SessionID":"YOUR_SESSION_TOKEN","Details":"Session continued"}
 Failed={"Status":"Failed","SessionID":"YOUR_SESSION_TOKEN","Details":"Session invalidated"}

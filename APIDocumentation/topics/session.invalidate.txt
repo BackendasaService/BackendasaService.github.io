@@ -2,5 +2,5 @@ session.invalidate
 Invalidate a session
 Invalidate a session.
 {"APIKey":"YOUR_API_KEY","SessionID":"YOUR_SESSION_TOKEN"}
-Ok={"Status":"Ok","SessionID":"YOUR_SESSION_TOKEN","Details":"Session invalidated"}
+Ok={"Status":"Success","SessionID":"YOUR_SESSION_TOKEN","Details":"Session invalidated"}
 Failed={"Status":"Failed","SessionID":"YOUR_SESSION_TOKEN","Details":"Session continued"}

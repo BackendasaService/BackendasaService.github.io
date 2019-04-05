@@ -2,7 +2,7 @@ user.create
 Create a user
 With this call you can create a user.
 {"APIKey":"YOUR_API_KEY","username":"THE_USERNAME","password":"THE_PASSWORD","email":"THE_EMAIL"}
-User Created={"Status":"Ok","Details":"User account created"}
+User Created={"Status":"Success","Details":"User account created"}
 Password Mismatch={"Status":"Failed","Details":"Password mismatch"}
 Email already in use={"Status":"Failed","Details":"Email in use"}
 Registration disabled={"Status":"Failed","Details":"Registration disabled"}

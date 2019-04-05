@@ -2,5 +2,5 @@ session.admin.invalidateAll
 Invalidate all sessions
 Invalidate all sessions.
 {"APIKey":"YOUR_API_KEY","SessionID":"YOUR_SESSION_TOKEN"}
-Ok={"Status":"Ok","SessionID":"YOUR_SESSION_TOKEN","Details":"Sessions invalidated"}
+Ok={"Status":"Success","SessionID":"YOUR_SESSION_TOKEN","Details":"Sessions invalidated"}
 Failed={"Status":"Failed","SessionID":"YOUR_SESSION_TOKEN","Details":"Sessions continued"}
