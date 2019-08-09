@@ -9,140 +9,140 @@
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 28,
+      "line": 26,
       "symbol": "JSON.dictionary(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 29,
+      "line": 27,
       "symbol": "JSON.array(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 30,
+      "line": 28,
       "symbol": "JSON.string(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 31,
+      "line": 29,
       "symbol": "JSON.number(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 32,
+      "line": 30,
       "symbol": "JSON.bool(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 33,
+      "line": 31,
       "symbol": "JSON.null",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 37,
+      "line": 34,
       "symbol": "JSON.subscript(_:)",
       "symbol_kind": "source.lang.swift.decl.function.subscript",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 44,
+      "line": 41,
       "symbol": "JSON.subscript(_:)",
       "symbol_kind": "source.lang.swift.decl.function.subscript",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 51,
+      "line": 48,
       "symbol": "JSON.subscript(dynamicMember:)",
       "symbol_kind": "source.lang.swift.decl.function.subscript",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 60,
+      "line": 57,
       "symbol": "JSON.init(data:options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 65,
+      "line": 62,
       "symbol": "JSON.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 91,
+      "line": 88,
       "symbol": "JSON.dictionary",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 98,
+      "line": 95,
       "symbol": "JSON.array",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 105,
+      "line": 102,
       "symbol": "JSON.string",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 116,
+      "line": 113,
       "symbol": "JSON.number",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 127,
+      "line": 124,
       "symbol": "JSON.double",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 131,
+      "line": 128,
       "symbol": "JSON.int",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 135,
+      "line": 132,
       "symbol": "JSON.bool",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 152,
+      "line": 154,
       "symbol": "JSON.object",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-JSONDecoder.swift",
-      "line": 165,
+      "line": 178,
       "symbol": "JSON.data(options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -268,21 +268,21 @@
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-Main.swift",
-      "line": 908,
+      "line": 938,
       "symbol": "BaaS.value(expression:inDatabase:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-Main.swift",
-      "line": 1056,
+      "line": 1086,
       "symbol": "BaaS.fileDownload(withFileID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/wes/Cloud/GITHUB.COM/BaaS/BaaS/Framework/BaaS/BaaS/BaaS-Main.swift",
-      "line": 1084,
+      "line": 1114,
       "symbol": "BaaS.fileDelete(withFileID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
